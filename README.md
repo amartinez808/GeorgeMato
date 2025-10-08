@@ -190,8 +190,3 @@ Commit & push:
 git add README.md
 git commit -m "docs: polish README with brand, deployment, and roadmap"
 git push -u origin docs/readme-refresh
-
-
-Open a Pull Request → merge when you’re happy.
-
-If you want, I can also generate a curated set of 5 hero videos + 8 gallery images (links + filenames + proper credits) that fit the brand so you can drop them straight into the repo.

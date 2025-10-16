@@ -22,6 +22,11 @@ const heroClips = [
     poster: '/naples.jpg',
     sources: [{ src: '/GMvideo3.mp4', type: 'video/mp4' }],
   },
+  {
+    id: 'gmvideo6',
+    poster: '/fisherIsland.avif',
+    sources: [{ src: '/GMvideo6.mp4', type: 'video/mp4' }],
+  },
 ];
 
 const galleryItems = [

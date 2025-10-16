@@ -1,192 +1,177 @@
-# GeorgeMato
-George Mato's Luxury Real-estate website
-George Mato — Luxury Waterfront Residences (Website)
+# George Mato | The Luxury Group
 
-A modern, minimal, high-end brochure site for George Mato | The Luxury Group Real Estate Consultants.
-Focus: cinematic waterfront visuals, quiet luxury copy, and a streamlined contact path for UHNW buyers in Miami & Southwest Florida.
+> **The finest waterfront residences curated personally**
 
-Tagline: The Finest Waterfront Residences Curated Personally.
-Voice: discreet, data-led, relationship-first.
+A sophisticated React application showcasing George Mato's luxury real estate consultancy, featuring cinematic video carousels, professional gallery presentations, and seamless client engagement tools.
 
-🔗 Live Demo
+## 🌊 Live Demo
 
-Production: Add your deployed URL here (Vercel or GitHub Pages)
+**Production:** [Deploy URL] *(Vercel Auto-Deploy)*  
+**Repository:** https://github.com/amartinez808/GeorgeMato
 
-Repo: https://github.com/amartinez808/GeorgeMato
+## ✨ Features
 
-✨ Highlights
+### 🎬 Cinematic Hero Experience
+- **8-video carousel** with smooth transitions and auto-rotation
+- **Premium 4K content** including UHD and custom GMvideo assets
+- **Graceful fallback** for autoplay restrictions
+- **8-second intervals** with optimized crossfade timing
 
-Cinematic hero video rotator with graceful autoplay fallback
+### 🖼️ Professional Gallery
+- **9 luxury properties** in clean grid layout
+- **Full-width presentation** inspired by luxury real estate sites
+- **Responsive design** (2-column desktop, 1-column mobile)
+- **Hover effects** and elegant captions
 
-Luxury typography (Inter + Manrope), champagne-gold accent
+### 👨‍💼 Professional Integration
+- **LinkedIn profile integration** with direct links
+- **Licensed broker credentials** prominently featured
+- **30+ years experience** and **$15B+ sales volume** highlighted
+- **6 professional achievements** showcase
 
-Responsive gallery (Fisher Island, Estero Bay, Brickell, Naples)
+### 🎨 Modern Design System
+- **Luxury coastal aesthetic** with blues, greens, and elegant neutrals
+- **Clean typography** using Inter font family
+- **Smooth animations** and micro-interactions
+- **Mobile-first responsive** design
 
-“Quiet, data-led representation” Approach section
+## 🛠 Tech Stack
 
-Lightweight vanilla HTML/CSS/JS (no build step), fast first paint
+- **React 18** with functional components and hooks
+- **Vite** for fast development and optimized builds
+- **React Router** for seamless navigation
+- **Modern CSS** with custom properties and grid layouts
+- **Optimized assets** with multiple video formats
 
-SEO + OpenGraph tags ready
+## 📁 Project Structure
 
-🧭 Mission Statement (brand philosophy)
+```
+GeorgeMato/
+├── public/
+│   ├── hero-1.mp4, hero-3.mp4          # Original hero videos
+│   ├── GMvideo2.mp4 → GMvideo6.mp4      # Custom video content
+│   ├── 15768406-uhd_4096_2160_24fps.mp4 # 4K UHD video
+│   ├── GMphoto1.jpg → GMphoto5.jpg      # Gallery images
+│   ├── george-mato.jpg                  # Professional headshot
+│   └── ...other assets
+├── src/
+│   ├── pages/
+│   │   ├── Home.jsx                     # Main landing page
+│   │   └── About.jsx                    # Professional profile
+│   ├── App.jsx                          # Root component
+│   ├── App.css                          # Global styles
+│   └── main.jsx                         # React entry point
+├── package.json
+├── vite.config.js
+└── README.md
+```
 
-“In luxury real estate, the most important thing about sales isn’t the property — it’s the person… The most powerful sale isn’t about closing a deal — it’s about opening a relationship that lasts well beyond the contract.” — George Mato
+## 🚀 Development
 
-This shapes site tone: connection, discretion, trust, and curation over volume.
+### Prerequisites
+- Node.js 16+ 
+- npm or yarn
 
-🗂 Project Structure
-.
-├── index.html
-├── hero-1.jpg
-├── hero-2.jpg
-├── hero-3.jpg
-├── hero-1.mp4
-├── hero-2.mp4
-├── fisherIsland.avif
-├── esteroBay.webp
-└── (optional/media referenced in HTML)
-    ├── miamiGolf.jpg / miamigolf2.mp4  ← replace (not pristine)
-    └── naples.jpg                     ← add or remove reference
-
-
-Note: index.html currently references miamigolf2.mp4 and naples.jpg. Replace with higher-end waterfront assets or update the markup to remove those entries.
-
-🛠 Tech Stack
-
-Pure HTML5/CSS3/JS
-
-Google Fonts: Inter, Manrope
-
-No frameworks, no bundlers — deploy anywhere
-
-▶️ Local Development
-# clone
+### Setup
+```bash
+# Clone repository
 git clone https://github.com/amartinez808/GeorgeMato
 cd GeorgeMato
 
-# open locally
-# Option A: Quick Python server
-python3 -m http.server 5173
-# visit http://localhost:5173
+# Install dependencies
+npm install
 
-# Option B: VS Code Live Server or any static server
+# Start development server
+npm run dev
+```
 
-🚀 Deploy
-Option 1 — Vercel (recommended)
+The app will be available at `http://localhost:5173`
 
-Import the repo in Vercel.
+### Build & Deploy
+```bash
+# Build for production
+npm run build
 
-Framework preset: Other (static).
+# Preview production build
+npm run preview
+```
 
-Output directory: / (root).
+## 🎯 Key Sections
 
-Deploy → add custom domain when ready.
+### Hero Carousel
+- 8 premium videos rotating every 8 seconds
+- Smooth opacity transitions with cubic-bezier easing
+- Mobile-optimized with touch interaction support
 
-Option 2 — GitHub Pages
+### Gallery
+- Full-width layout inspired by luxury real estate sites
+- Clean grid system with consistent aspect ratios
+- Professional captions with gradient overlays
 
-Push to main.
+### About Page
+- Comprehensive professional background
+- Licensed broker credentials
+- LinkedIn profile integration
+- 6 achievement highlights
 
-Repo → Settings → Pages → Source: Deploy from a branch → Branch: main → / (root).
+### Contact Integration
+- Direct email consultation requests
+- LinkedIn profile access
+- Professional credential verification
 
-Save and wait for the Pages URL.
+## 🎨 Design Philosophy
 
-🧩 Key Files & What to Edit
+**Tone:** Discreet, consultative, relationship-first  
+**Aesthetic:** Coastal luxury with sophisticated minimalism  
+**Typography:** Clean, readable, with generous whitespace  
+**Color Palette:** Soft blues, earthy greens, elegant neutrals
 
-index.html
+## 📈 Performance Optimizations
 
-Header brand line:
-George Mato | The Luxury Group
+- **Optimized video loading** with smart preloading
+- **Responsive images** with appropriate sizing
+- **CSS Grid** for efficient layouts
+- **Smooth animations** with GPU acceleration
+- **Mobile-first** responsive design
 
-Hero label & headline:
+## 🔄 Recent Updates
 
-“Luxury condominium consultant”
+### v2.0 - React Conversion & Enhancement
+- ✅ Converted from static site to React application
+- ✅ Added 8-video hero carousel with smooth transitions
+- ✅ Integrated 9-photo professional gallery
+- ✅ Added LinkedIn profile integration
+- ✅ Enhanced professional credentials section
+- ✅ Implemented luxury real estate design aesthetic
+- ✅ Added mobile-responsive gallery layout
 
-“Waterfront residences, curated personally.”
+## 🚀 Deployment
 
-Hero media (videos/images):
-Replace the golf course clip with a pristine waterfront/skyline 4K loop.
+### Vercel (Recommended)
+1. Connect GitHub repository to Vercel
+2. Framework: **Vite**
+3. Build command: `npm run build`
+4. Output directory: `dist`
+5. Auto-deploy on push to main
 
-CTA: mailto:workwith@itsradai.com (update to George’s final email when available).
+### Manual Build
+```bash
+npm run build
+# Deploy dist/ folder to your hosting provider
+```
 
-Gallery images/captions: ensure only ultra-high-quality waterfront shots.
+## 🤝 Professional Contact
 
-Approach section: keep “Quiet, data-led representation”; you can add years/revenue feats if desired.
+**George Mato**  
+Principal, The Luxury Group  
+Licensed Real Estate Professional  
+📧 workwith@itsradai.com  
+💼 [LinkedIn Profile](https://www.linkedin.com/in/georgemato/)
 
-SEO/OG: title/description/images are pre-filled; update og:image to your best hero still.
+**Development Team**  
+Antonio Martinez, RAD AI  
+🌐 itsradai.com
 
-Assets
+---
 
-Keep only .jpg/.webp/.avif/.mp4 you actually use.
-
-Replace miamigolf2.mp4 and any “not pristine” assets with cleaner, luxury visuals.
-
-🎨 Content & Brand Notes
-
-Tone: discreet, consultative, relationship-first.
-
-Palette: ivory/white, deep navy overlays, champagne gold accent (--accent: #c6a869).
-
-Typography: Large hero H1, generous whitespace, minimal UI chrome.
-
-📈 Performance & UX
-
-Videos are muted, playsinline, and rotate every ~5.2s with fade.
-
-Autoplay gracefully requests a tap if blocked (mobile).
-
-Images use object-fit: cover and hover scale for polish.
-
-Consider serving hero videos in H.264 + HEVC/VP9 for broader compatibility.
-
-✅ Roadmap / TODO
-
- Replace golf course media with pristine waterfront/skyline footage (4K loop, dusk or morning light).
-
- Verify/remove references to miamigolf2.mp4 and naples.jpg if not provided.
-
- Finalize contact email (e.g., george@…) and update CTAs.
-
- Add favicon and touch icons.
-
- Add Analytics (e.g., Plausible or GA4).
-
- Add Robots/Sitemap for SEO.
-
- Optional: Add /about page that presents the full mission statement elegantly.
-
- Optional: Add simple lead form (Formspree / Basin) with SPF/DKIM-ready email.
-
- Optional: Swap static gallery for a lightbox (still keep weight low).
-
-🔒 Licensing
-
-Code: MIT (or your preference).
-
-Images/Videos: ensure proper license (Unsplash/Pexels/Adobe Stock). Replace placeholders with licensed assets before launch.
-
-🤝 Credits
-
-Copy & creative direction by Antonio (RAD AI) with guidance from George Mato.
-
-UI/Code scaffolding by RAD AI.
-
-📬 Contact
-
-Antonio, RAD AI — itsradai.com
-
-Project inquiries: add preferred email/phone
-
-How to update this README
-
-Create a new branch:
-
-git checkout -b docs/readme-refresh
-
-
-Replace the repo’s README.md with this content.
-
-Commit & push:
-
-git add README.md
-git commit -m "docs: polish README with brand, deployment, and roadmap"
-git push -u origin docs/readme-refresh
+*"In luxury real estate, the most important thing about sales isn't the property — it's the person... The most powerful sale isn't about closing a deal — it's about opening a relationship that lasts well beyond the contract."* — George Mato

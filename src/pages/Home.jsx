@@ -53,12 +53,6 @@ const galleryItems = [
     variant: 'large',
   },
   {
-    id: 'fisher-island',
-    src: '/fisherIsland.avif',
-    alt: 'Fisher Island private marina',
-    caption: 'Fisher Island • Marina enclave',
-  },
-  {
     id: 'estero-bay',
     src: '/esteroBay.webp',
     alt: 'Estero Bay waterfront horizon',

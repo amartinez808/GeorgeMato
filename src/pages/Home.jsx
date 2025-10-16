@@ -95,6 +95,20 @@ const galleryItems = [
     alt: 'Luxury amenities and lifestyle',
     caption: 'Aventura • Resort living',
   },
+  {
+    id: 'ritz-carlton-george',
+    src: '/georgeRC.webp',
+    alt: 'George Mato at The Ritz-Carlton Residences',
+    caption: 'The Ritz-Carlton • Project Leadership',
+    variant: 'large',
+  },
+  {
+    id: 'ritz-marina',
+    src: '/RCREB Ritz Marina Final.jpg',
+    alt: 'The Ritz-Carlton Residences Marina',
+    caption: 'The Ritz-Carlton • Marina Sanctuary',
+    variant: 'large',
+  },
 ];
 
 const approachHighlights = [

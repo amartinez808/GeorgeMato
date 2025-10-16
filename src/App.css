@@ -434,11 +434,14 @@ main {
   height: 500px;
 }
 
-/* Special styling for Ritz Carlton photos to show full images */
+/* Special styling for Ritz Carlton photos - bigger, sharper, elegant */
 .gallery-item[data-id="ritz-carlton-george"] img,
 .gallery-item[data-id="ritz-marina"] img {
   object-fit: contain;
-  height: 500px;
+  height: 600px;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  filter: contrast(1.05) saturate(1.1);
 }
 
 @media (max-width: 1024px) {
@@ -452,7 +455,7 @@ main {
   
   .gallery-item[data-id="ritz-carlton-george"] img,
   .gallery-item[data-id="ritz-marina"] img {
-    height: 400px;
+    height: 480px;
   }
 }
 
@@ -473,7 +476,7 @@ main {
   
   .gallery-item[data-id="ritz-carlton-george"] img,
   .gallery-item[data-id="ritz-marina"] img {
-    height: 300px;
+    height: 380px;
   }
 }
 
@@ -489,7 +492,7 @@ main {
   
   .gallery-item[data-id="ritz-carlton-george"] img,
   .gallery-item[data-id="ritz-marina"] img {
-    height: 250px;
+    height: 320px;
   }
 }
 

@@ -12,6 +12,11 @@ const heroClips = [
     poster: '/hero-3.jpg',
     sources: [{ src: '/hero-3.mp4', type: 'video/mp4' }],
   },
+  {
+    id: 'gmvideo',
+    poster: '/hero-2.jpg',
+    sources: [{ src: '/GMvideo1.mp4', type: 'video/mp4' }],
+  },
 ];
 
 const galleryItems = [

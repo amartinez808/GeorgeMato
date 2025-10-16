@@ -442,12 +442,23 @@ main {
   height: 500px;
 }
 
+/* Special styling for George's RC photo to show full image */
+.gallery-item[data-id="ritz-carlton-george"] img {
+  object-fit: contain;
+  background: #f8f9fa;
+  height: 500px;
+}
+
 @media (max-width: 1024px) {
   .gallery-item img {
     height: 350px;
   }
   
   .gallery-item.large img {
+    height: 400px;
+  }
+  
+  .gallery-item[data-id="ritz-carlton-george"] img {
     height: 400px;
   }
 }
@@ -466,6 +477,10 @@ main {
   .gallery-item.large img {
     height: 300px;
   }
+  
+  .gallery-item[data-id="ritz-carlton-george"] img {
+    height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -475,6 +490,10 @@ main {
   
   .gallery-item img,
   .gallery-item.large img {
+    height: 250px;
+  }
+  
+  .gallery-item[data-id="ritz-carlton-george"] img {
     height: 250px;
   }
 }

@@ -419,6 +419,7 @@ const Home = () => {
               <figure
                 key={item.id}
                 className={`gallery-item${item.variant === 'large' ? ' large' : ''}`}
+                data-id={item.id}
               >
                 <img src={item.src} alt={item.alt} loading="lazy" />
                 <figcaption>{item.caption}</figcaption>

@@ -70,6 +70,37 @@ const galleryItems = [
     alt: 'Naples waterfront residence',
     caption: 'Naples • Waterfront estate',
   },
+  {
+    id: 'gmphoto1',
+    src: '/GMphoto1.jpg',
+    alt: 'Luxury waterfront residence',
+    caption: 'Miami • Waterfront sanctuary',
+    variant: 'large',
+  },
+  {
+    id: 'gmphoto2',
+    src: '/GMphoto2.jpg',
+    alt: 'Modern luxury interior',
+    caption: 'Brickell • Designer living',
+  },
+  {
+    id: 'gmphoto3',
+    src: '/GMphoto3.jpg',
+    alt: 'Premium coastal property',
+    caption: 'Gulf Coast • Private retreat',
+  },
+  {
+    id: 'gmphoto4',
+    src: '/GMphoto4.jpg',
+    alt: 'Elegant architectural details',
+    caption: 'Miami Beach • Refined elegance',
+  },
+  {
+    id: 'gmphoto5',
+    src: '/GMphoto5.jpg',
+    alt: 'Luxury amenities and lifestyle',
+    caption: 'Aventura • Resort living',
+  },
 ];
 
 const approachHighlights = [

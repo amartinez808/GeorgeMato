@@ -18,11 +18,6 @@ const heroClips = [
     sources: [{ src: '/GMvideo2.mp4', type: 'video/mp4' }],
   },
   {
-    id: 'gmvideo3',
-    poster: '/naples.jpg',
-    sources: [{ src: '/GMvideo3.mp4', type: 'video/mp4' }],
-  },
-  {
     id: 'gmvideo4',
     poster: '/esteroBay.webp',
     sources: [{ src: '/GMvideo4.mp4', type: 'video/mp4' }],

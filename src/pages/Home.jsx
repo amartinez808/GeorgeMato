@@ -37,6 +37,11 @@ const heroClips = [
     poster: '/fisherIsland.avif',
     sources: [{ src: '/GMvideo6.mp4', type: 'video/mp4' }],
   },
+  {
+    id: 'uhd-video',
+    poster: '/hero-1.jpg',
+    sources: [{ src: '/15768406-uhd_4096_2160_24fps.mp4', type: 'video/mp4' }],
+  },
 ];
 
 const galleryItems = [

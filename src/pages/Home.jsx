@@ -67,12 +67,6 @@ const galleryItems = [
     variant: 'large',
   },
   {
-    id: 'gmphoto1',
-    src: '/GMphoto1.jpg',
-    alt: 'Luxury waterfront residence',
-    caption: 'Miami • Waterfront sanctuary',
-  },
-  {
     id: 'gmphoto3',
     src: '/GMphoto3.jpg',
     alt: 'Premium coastal property',

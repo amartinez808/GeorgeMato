@@ -13,9 +13,9 @@ const accolades = [
       'Stewarded waterfront towers, branded residences, and hotel-partnered sanctuaries from blueprint through completion.',
   },
   {
-    title: 'Licensed Real Estate Professional',
+    title: 'Licensed Realtor',
     description:
-      'Florida licensed broker with specialized expertise in luxury waterfront properties and high-end condominium developments.',
+      'Florida licensed Realtor with specialized expertise in luxury waterfront properties and high-end condominium developments.',
   },
   {
     title: 'Discretion-first philosophy',
@@ -68,7 +68,7 @@ const About = () => {
             />
             <div className="about-copy">
               <h2>About George Mato</h2>
-              <h3>Principal, The Luxury Group — Licensed Real Estate Professional</h3>
+              <h3>Principal, The Luxury Group — Licensed Realtor</h3>
               <p className="about-mission">
                 <em>"The finest waterfront residences curated personally."</em>
               </p>
@@ -78,7 +78,7 @@ const About = () => {
                 waterfront properties.
               </p>
               <p>
-                As a Florida licensed broker, George specializes in the most exclusive market segments: penthouse acquisitions, 
+                As a Florida licensed Realtor, George specializes in the most exclusive market segments: penthouse acquisitions, 
                 branded residences, and private marina estates. His approach combines deep market intelligence with white-glove 
                 service, ensuring each client receives unparalleled access to off-market opportunities.
               </p>
@@ -88,10 +88,11 @@ const About = () => {
                 when the address is right.
               </p>
               <p>
-                Whether stewarding $15B+ in development sales or hand-selecting Gulf-view sanctuaries, George's
-                calm confidence and proprietary intel position his clients ahead of the market — without the noise.
+                With extensive experience in luxury development projects and coastal estate acquisitions, George's 
+                calm confidence and proprietary market insights consistently deliver exceptional results for his 
+                discerning clientele.
               </p>
-              <p className="about-signature">– George Mato, Licensed Real Estate Professional</p>
+              <p className="about-signature">– George Mato, Licensed Realtor</p>
               <div className="about-credentials">
                 <a href="https://www.linkedin.com/in/georgemato/" target="_blank" rel="noopener noreferrer" className="credential-link">
                   View Professional Profile on LinkedIn

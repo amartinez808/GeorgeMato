@@ -13,9 +13,14 @@ const heroClips = [
     sources: [{ src: '/hero-3.mp4', type: 'video/mp4' }],
   },
   {
-    id: 'gmvideo',
+    id: 'gmvideo2',
     poster: '/hero-2.jpg',
-    sources: [{ src: '/GMvideo1.mp4', type: 'video/mp4' }],
+    sources: [{ src: '/GMvideo2.mp4', type: 'video/mp4' }],
+  },
+  {
+    id: 'gmvideo3',
+    poster: '/naples.jpg',
+    sources: [{ src: '/GMvideo3.mp4', type: 'video/mp4' }],
   },
 ];
 

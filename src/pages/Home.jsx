@@ -85,12 +85,6 @@ const galleryItems = [
     caption: 'Miami Beach • Refined elegance',
   },
   {
-    id: 'gmphoto5',
-    src: '/GMphoto5.jpg',
-    alt: 'Luxury amenities and lifestyle',
-    caption: 'Aventura • Resort living',
-  },
-  {
     id: 'ritz-carlton-george',
     src: '/georgeRC.webp',
     alt: 'George Mato at The Ritz-Carlton Residences',

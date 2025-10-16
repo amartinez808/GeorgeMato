@@ -60,7 +60,7 @@ const approachHighlights = [
   },
 ];
 
-const HERO_ROTATION_INTERVAL = 5200;
+const HERO_ROTATION_INTERVAL = 8000;
 
 const Home = () => {
   const heroRef = useRef(null);
@@ -134,7 +134,7 @@ const Home = () => {
             console.debug('[hero] reset failed', error);
           }
           activeTimeouts.delete(timeoutId);
-        }, 320);
+        }, 1600);
         activeTimeouts.add(timeoutId);
       }
 
@@ -241,7 +241,7 @@ const Home = () => {
         const timerId = window.setTimeout(() => {
           playIndex((index + 1) % videos.length).catch(() => {});
           activeTimeouts.delete(timerId);
-        }, 600);
+        }, 1200);
         activeTimeouts.add(timerId);
       };
 
@@ -252,7 +252,7 @@ const Home = () => {
         const timerId = window.setTimeout(() => {
           playIndex((index + 1) % videos.length).catch(() => {});
           activeTimeouts.delete(timerId);
-        }, 600);
+        }, 1200);
         activeTimeouts.add(timerId);
       };
 

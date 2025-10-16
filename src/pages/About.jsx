@@ -13,9 +13,24 @@ const accolades = [
       'Stewarded waterfront towers, branded residences, and hotel-partnered sanctuaries from blueprint through completion.',
   },
   {
+    title: 'Licensed Real Estate Professional',
+    description:
+      'Florida licensed broker with specialized expertise in luxury waterfront properties and high-end condominium developments.',
+  },
+  {
     title: 'Discretion-first philosophy',
     description:
       'Every engagement is private, data-led, and engineered to honor personal brand, timeline, and legacy objectives.',
+  },
+  {
+    title: 'Market Intelligence Leader',
+    description:
+      'Proprietary research and exclusive market insights driving strategic acquisition decisions for discerning clientele.',
+  },
+  {
+    title: 'Professional Network',
+    description:
+      'Cultivated relationships with elite architects, private lenders, legal partners, and luxury service providers.',
   },
 ];
 
@@ -53,14 +68,19 @@ const About = () => {
             />
             <div className="about-copy">
               <h2>About George Mato</h2>
-              <h3>The Luxury Group — Real Estate Consultants</h3>
+              <h3>Principal, The Luxury Group — Licensed Real Estate Professional</h3>
               <p className="about-mission">
-                <em>“The finest waterfront residences curated personally.”</em>
+                <em>"The finest waterfront residences curated personally."</em>
               </p>
               <p>
-                For George, luxury real estate has always been about human connection. Behind every penthouse, villa, or
-                private marina berth sits a family vision — a rhythm of living that must feel effortless the moment the
-                doors open.
+                With over three decades of distinguished service in luxury real estate, George Mato has established himself 
+                as Miami and Southwest Florida's preeminent consultant for ultra-high-net-worth clients seeking exceptional 
+                waterfront properties.
+              </p>
+              <p>
+                As a Florida licensed broker, George specializes in the most exclusive market segments: penthouse acquisitions, 
+                branded residences, and private marina estates. His approach combines deep market intelligence with white-glove 
+                service, ensuring each client receives unparalleled access to off-market opportunities.
               </p>
               <p>
                 His role is to listen first. With a measured cadence, George translates wish lists into discreet search
@@ -68,10 +88,15 @@ const About = () => {
                 when the address is right.
               </p>
               <p>
-                Whether he is hand-selecting Gulf-view sanctuaries or stewarding branded towers in Brickell, George’s
+                Whether stewarding $15B+ in development sales or hand-selecting Gulf-view sanctuaries, George's
                 calm confidence and proprietary intel position his clients ahead of the market — without the noise.
               </p>
-              <p className="about-signature">– George Mato</p>
+              <p className="about-signature">– George Mato, Licensed Real Estate Professional</p>
+              <div className="about-credentials">
+                <a href="https://www.linkedin.com/in/georgemato/" target="_blank" rel="noopener noreferrer" className="credential-link">
+                  View Professional Profile on LinkedIn
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -93,9 +118,14 @@ const About = () => {
             Request a private consultation to outline objectives, timing, and the level of discretion required. George
             responds personally to every introduction.
           </p>
-          <a className="cta" href="mailto:workwith@itsradai.com">
-            Schedule consultation
-          </a>
+          <div className="contact-actions">
+            <a className="cta" href="mailto:workwith@itsradai.com">
+              Schedule consultation
+            </a>
+            <a className="linkedin-link" href="https://www.linkedin.com/in/georgemato/" target="_blank" rel="noopener noreferrer">
+              View LinkedIn Profile
+            </a>
+          </div>
         </section>
       </main>
 

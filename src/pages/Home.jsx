@@ -449,11 +449,16 @@ const Home = () => {
         </section>
 
         <section className="contact" id="contact">
-          <h2>Let’s design your next move</h2>
+          <h2>Let's design your next move</h2>
           <p>Reserve a discreet conversation with George Mato to outline objectives, timing, and the residences that fit.</p>
-          <a className="cta" href="mailto:workwith@itsradai.com">
-            Request consultation
-          </a>
+          <div className="contact-actions">
+            <a className="cta" href="mailto:workwith@itsradai.com">
+              Request consultation
+            </a>
+            <a className="linkedin-link" href="https://www.linkedin.com/in/georgemato/" target="_blank" rel="noopener noreferrer">
+              Connect on LinkedIn
+            </a>
+          </div>
         </section>
       </main>
 

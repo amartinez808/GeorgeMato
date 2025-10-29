@@ -3,6 +3,16 @@ import { Link, useLocation } from 'react-router-dom';
 
 const heroClips = [
   {
+    id: 'gmvideo2',
+    poster: '/hero-2.jpg',
+    sources: [{ src: '/GMvideo2.mp4', type: 'video/mp4' }],
+  },
+  {
+    id: 'uhd-video',
+    poster: '/hero-1.jpg',
+    sources: [{ src: '/15768406-uhd_4096_2160_24fps.mp4', type:'video/mp4' }],
+  },
+  {
     id: 'brickell',
     poster: '/hero-1.jpg',
     sources: [{ src: '/hero-1.mp4', type: 'video/mp4' }],
@@ -11,36 +21,6 @@ const heroClips = [
     id: 'gulf',
     poster: '/hero-3.jpg',
     sources: [{ src: '/hero-3.mp4', type: 'video/mp4' }],
-  },
-  {
-    id: 'gmvideo2',
-    poster: '/hero-2.jpg',
-    sources: [{ src: '/GMvideo2.mp4', type: 'video/mp4' }],
-  },
-  {
-    id: 'gmvideo3',
-    poster: '/naples.jpg',
-    sources: [{ src: '/GMvideo3.mp4', type: 'video/mp4' }],
-  },
-  {
-    id: 'gmvideo4',
-    poster: '/esteroBay.webp',
-    sources: [{ src: '/GMvideo4.mp4', type: 'video/mp4' }],
-  },
-  {
-    id: 'gmvideo5',
-    poster: '/hero-2.jpg',
-    sources: [{ src: '/GMvideo5.mp4', type: 'video/mp4' }],
-  },
-  {
-    id: 'gmvideo6',
-    poster: '/fisherIsland.avif',
-    sources: [{ src: '/GMvideo6.mp4', type: 'video/mp4' }],
-  },
-  {
-    id: 'uhd-video',
-    poster: '/hero-1.jpg',
-    sources: [{ src: '/15768406-uhd_4096_2160_24fps.mp4', type: 'video/mp4' }],
   },
 ];
 
@@ -65,17 +45,11 @@ const galleryItems = [
     caption: 'Naples • Waterfront estate',
   },
   {
-    id: 'gmphoto1',
-    src: '/GMphoto1.jpg',
-    alt: 'Luxury waterfront residence',
-    caption: 'Miami • Waterfront sanctuary',
-    variant: 'large',
-  },
-  {
     id: 'gmphoto2',
     src: '/GMphoto2.jpg',
     alt: 'Modern luxury interior',
     caption: 'Brickell • Designer living',
+    variant: 'large',
   },
   {
     id: 'gmphoto3',
@@ -88,12 +62,6 @@ const galleryItems = [
     src: '/GMphoto4.jpg',
     alt: 'Elegant architectural details',
     caption: 'Miami Beach • Refined elegance',
-  },
-  {
-    id: 'gmphoto5',
-    src: '/GMphoto5.jpg',
-    alt: 'Luxury amenities and lifestyle',
-    caption: 'Aventura • Resort living',
   },
   {
     id: 'ritz-carlton-george',
@@ -129,7 +97,7 @@ const approachHighlights = [
   },
 ];
 
-const HERO_ROTATION_INTERVAL = 8000;
+const HERO_ROTATION_INTERVAL = 12000;
 
 const Home = () => {
   const heroRef = useRef(null);
@@ -436,6 +404,7 @@ const Home = () => {
               <figure
                 key={item.id}
                 className={`gallery-item${item.variant === 'large' ? ' large' : ''}`}
+                data-id={item.id}
               >
                 <img src={item.src} alt={item.alt} loading="lazy" />
                 <figcaption>{item.caption}</figcaption>
@@ -462,9 +431,6 @@ const Home = () => {
           <div className="contact-actions">
             <a className="cta" href="mailto:workwith@itsradai.com">
               Request consultation
-            </a>
-            <a className="linkedin-link" href="https://www.linkedin.com/in/georgemato/" target="_blank" rel="noopener noreferrer">
-              Connect on LinkedIn
             </a>
           </div>
         </section>

@@ -93,11 +93,6 @@ const About = () => {
                 discerning clientele.
               </p>
               <p className="about-signature">– George Mato, Licensed Realtor</p>
-              <div className="about-credentials">
-                <a href="https://www.linkedin.com/in/georgemato/" target="_blank" rel="noopener noreferrer" className="credential-link">
-                  View Professional Profile on LinkedIn
-                </a>
-              </div>
             </div>
           </div>
         </section>
@@ -122,9 +117,6 @@ const About = () => {
           <div className="contact-actions">
             <a className="cta" href="mailto:workwith@itsradai.com">
               Schedule consultation
-            </a>
-            <a className="linkedin-link" href="https://www.linkedin.com/in/georgemato/" target="_blank" rel="noopener noreferrer">
-              View LinkedIn Profile
             </a>
           </div>
         </section>

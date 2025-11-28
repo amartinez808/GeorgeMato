@@ -47,13 +47,18 @@ const About = () => {
     <>
       <header>
         <div className="nav-inner">
-          <div className="brand">George Mato | The Luxury Group</div>
+          <div className="brand">
+            <span className="brand-wordmark">The Luxury Group</span>
+          </div>
           <nav>
             <Link to="/">Home</Link>
             <Link to="/#gallery">Residences</Link>
             <Link to="/#approach">Approach</Link>
             <a href="#contact">Contact</a>
           </nav>
+          <a className="nav-cta" href="mailto:gmato23@gmail.com">
+            Schedule a Call
+          </a>
         </div>
       </header>
 
@@ -115,7 +120,7 @@ const About = () => {
             responds personally to every introduction.
           </p>
           <div className="contact-actions">
-            <a className="cta" href="mailto:workwith@itsradai.com">
+            <a className="cta" href="mailto:gmato23@gmail.com">
               Schedule consultation
             </a>
           </div>

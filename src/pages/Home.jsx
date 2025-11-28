@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const heroClips = [
@@ -26,56 +26,48 @@ const heroClips = [
 
 const galleryItems = [
   {
-    id: 'brickell-terrace',
+    id: 'residence-frame-01',
     src: '/hero-1.jpg',
-    alt: 'Brickell penthouse terrace',
-    caption: 'Brickell • Sky residence',
+    alt: 'Sunlit terrace overlooking the city skyline',
     variant: 'large',
   },
   {
-    id: 'estero-bay',
+    id: 'water-horizon',
     src: '/esteroBay.webp',
-    alt: 'Estero Bay waterfront horizon',
-    caption: 'Estero Bay • Gulf horizon',
+    alt: 'Golden hour horizon across calm waterfront',
   },
   {
-    id: 'naples',
+    id: 'waterfront-residence',
     src: '/naples.jpg',
-    alt: 'Naples waterfront residence',
-    caption: 'Naples • Waterfront estate',
+    alt: 'Contemporary waterfront residence with private dock',
   },
   {
-    id: 'gmphoto2',
+    id: 'interior-lounge',
     src: '/GMphoto2.jpg',
-    alt: 'Modern luxury interior',
-    caption: 'Brickell • Designer living',
+    alt: 'Refined interior lounge with sculptural lighting',
     variant: 'large',
   },
   {
-    id: 'gmphoto3',
+    id: 'coastal-retreat',
     src: '/GMphoto3.jpg',
-    alt: 'Premium coastal property',
-    caption: 'Gulf Coast • Private retreat',
+    alt: 'Coastal retreat framed by tropical palms',
   },
   {
-    id: 'gmphoto4',
+    id: 'architectural-detail',
     src: '/GMphoto4.jpg',
-    alt: 'Elegant architectural details',
-    caption: 'Miami Beach • Refined elegance',
+    alt: 'Architectural detail highlighting glass and stone',
   },
   {
-    id: 'ritz-carlton-george',
+    id: 'advisor-marina',
     src: '/georgeRC.webp',
-    alt: 'George Mato at The Ritz-Carlton Residences',
-    caption: 'The Ritz-Carlton • Project Leadership',
     variant: 'large',
+    alt: 'Advisor overlooking marina from private balcony',
   },
   {
-    id: 'ritz-marina',
+    id: 'marina-dusk',
     src: '/RCREB Ritz Marina Final.jpg',
-    alt: 'The Ritz-Carlton Residences Marina',
-    caption: 'The Ritz-Carlton • Marina Sanctuary',
     variant: 'large',
+    alt: 'Seaside marina with luxury residences at dusk',
   },
 ];
 
@@ -103,7 +95,10 @@ const Home = () => {
   const heroRef = useRef(null);
   const statusRef = useRef(null);
   const videoRefs = useRef([]);
+  const activeIndexRef = useRef(0);
   const location = useLocation();
+  const [heroOverlayOpacity, setHeroOverlayOpacity] = useState(1);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     if (location.hash) {
@@ -131,7 +126,6 @@ const Home = () => {
       video.preload = 'auto';
     });
 
-    let activeIndex = 0;
     let awaitingInteraction = false;
     let rotationTimer = null;
     const cleanupFns = [];
@@ -153,7 +147,7 @@ const Home = () => {
     };
 
     const markActive = (nextIndex) => {
-      const currentVideo = videos[activeIndex];
+      const currentVideo = videos[activeIndexRef.current];
       const nextVideo = videos[nextIndex];
       if (!nextVideo) {
         return;
@@ -175,44 +169,7 @@ const Home = () => {
         activeTimeouts.add(timeoutId);
       }
 
-      activeIndex = nextIndex;
-    };
-
-    const scheduleNext = () => {
-      clearRotationTimer();
-      rotationTimer = window.setTimeout(() => {
-        advance();
-      }, HERO_ROTATION_INTERVAL);
-    };
-
-    const handleAutoplayBlocked = () => {
-      if (awaitingInteraction) {
-        return;
-      }
-
-      awaitingInteraction = true;
-      heroNode?.classList.add('awaiting-autoplay');
-      showStatus('Tap to enable playback');
-      clearRotationTimer();
-
-      const resume = () => {
-        document.removeEventListener('pointerdown', resume, true);
-        document.removeEventListener('keydown', resume, true);
-        awaitingInteraction = false;
-        heroNode?.classList.remove('awaiting-autoplay');
-        showStatus('');
-        playIndex(activeIndex).catch(() => {
-          showStatus('Media temporarily unavailable');
-        });
-      };
-
-      document.addEventListener('pointerdown', resume, { once: true, capture: true });
-      document.addEventListener('keydown', resume, { once: true, capture: true });
-
-      cleanupFns.push(() => {
-        document.removeEventListener('pointerdown', resume, true);
-        document.removeEventListener('keydown', resume, true);
-      });
+      activeIndexRef.current = nextIndex;
     };
 
     const handlePlaybackFailure = (error) => {
@@ -262,9 +219,44 @@ const Home = () => {
     };
 
     const advance = () => {
-      const nextIndex = (activeIndex + 1) % videos.length;
-      playIndex(nextIndex).catch(() => {
-        // handled in playIndex
+      const nextIndex = (activeIndexRef.current + 1) % videos.length;
+      playIndex(nextIndex).catch(() => {});
+    };
+
+    const scheduleNext = () => {
+      clearRotationTimer();
+      rotationTimer = window.setTimeout(() => {
+        advance();
+      }, HERO_ROTATION_INTERVAL);
+    };
+
+    const handleAutoplayBlocked = () => {
+      if (awaitingInteraction) {
+        return;
+      }
+
+      awaitingInteraction = true;
+      heroNode?.classList.add('awaiting-autoplay');
+      showStatus('Tap to enable playback');
+      clearRotationTimer();
+
+      const resume = () => {
+        document.removeEventListener('pointerdown', resume, true);
+        document.removeEventListener('keydown', resume, true);
+        awaitingInteraction = false;
+        heroNode?.classList.remove('awaiting-autoplay');
+        showStatus('');
+        playIndex(activeIndexRef.current).catch(() => {
+          showStatus('Media temporarily unavailable');
+        });
+      };
+
+      document.addEventListener('pointerdown', resume, { once: true, capture: true });
+      document.addEventListener('keydown', resume, { once: true, capture: true });
+
+      cleanupFns.push(() => {
+        document.removeEventListener('pointerdown', resume, true);
+        document.removeEventListener('keydown', resume, true);
       });
     };
 
@@ -313,10 +305,8 @@ const Home = () => {
     document.addEventListener('visibilitychange', handleVisibilityChange);
     cleanupFns.push(() => document.removeEventListener('visibilitychange', handleVisibilityChange));
 
-    markActive(activeIndex);
-    playIndex(activeIndex).catch(() => {
-      // autoplay blocked handled in playIndex
-    });
+    markActive(activeIndexRef.current);
+    playIndex(activeIndexRef.current).catch(() => {});
 
     return () => {
       clearRotationTimer();
@@ -336,21 +326,81 @@ const Home = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroNode = heroRef.current;
+      if (!heroNode) {
+        return;
+      }
+
+      const heroHeight = heroNode.offsetHeight || 1;
+      const fadeDistance = heroHeight * 0.6;
+      const scrolled = window.scrollY;
+      const nextOpacity = Math.max(0, Math.min(1, 1 - scrolled / fadeDistance));
+      setHeroOverlayOpacity(nextOpacity);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   const currentYear = new Date().getFullYear();
 
   return (
     <>
       <header>
         <div className="nav-inner">
-          <div className="brand">George Mato | The Luxury Group</div>
+          <div className="brand">
+            <span className="brand-wordmark">The Luxury Group</span>
+          </div>
           <nav>
             <a href="#gallery">Residences</a>
             <a href="#approach">Approach</a>
             <a href="#contact">Contact</a>
             <Link to="/about">About</Link>
           </nav>
+          <a className="nav-cta" href="mailto:gmato23@gmail.com">
+            Schedule a Call
+          </a>
+          <button
+            className="mobile-toggle"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle navigation"
+            aria-expanded={isMobileMenuOpen}
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </button>
         </div>
       </header>
+
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'is-open' : ''}`}>
+        <div className="mobile-menu-inner">
+          <nav className="mobile-nav">
+            <a href="#gallery" onClick={closeMobileMenu}>
+              Residences
+            </a>
+            <a href="#approach" onClick={closeMobileMenu}>
+              Approach
+            </a>
+            <a href="#contact" onClick={closeMobileMenu}>
+              Contact
+            </a>
+            <Link to="/about" onClick={closeMobileMenu}>
+              About
+            </Link>
+          </nav>
+        </div>
+      </div>
 
       <main>
         <section className="hero" id="top" ref={heroRef}>
@@ -373,20 +423,39 @@ const Home = () => {
               </video>
             ))}
           </div>
-          <div className="hero-overlay">
-            <span className="hero-label">Luxury condominium consultant</span>
-            <h1>Waterfront residences, curated personally.</h1>
-            <p>
-              From Brickell penthouses to Ritz-Carlton coastal sanctuaries, George Mato secures the rarest addresses for
-              discerning collectors.
-            </p>
-            <div className="hero-actions">
-              <a className="hero-link" href="mailto:workwith@itsradai.com">
-                Private consultation
-              </a>
-              <a className="hero-link" href="#gallery">
-                View portfolio
-              </a>
+          <div className="hero-overlay" style={{ opacity: heroOverlayOpacity }}>
+            <div className="hero-content">
+              <div className="hero-intro">
+                <span className="hero-label">Private waterfront advisory</span>
+              </div>
+              <h1>Exclusive Brickell &amp; Ritz-Carlton homes, personally curated.</h1>
+              <p className="hero-subline">
+                George Mato secures the rarest addresses for discerning collectors with quiet, data-led representation.
+              </p>
+              <div className="hero-actions">
+                <a className="cta hero-primary" href="mailto:gmato23@gmail.com">
+                  Talk with George
+                </a>
+                <a className="hero-cta-secondary" href="tel:7863017500">
+                  <span aria-hidden="true">☎</span>
+                  <span className="hero-cta-secondary-text">786-301-7500</span>
+                </a>
+                <a className="hero-link" href="#gallery">
+                  Explore portfolio
+                </a>
+              </div>
+            </div>
+            <div className="hero-persona">
+              <img
+                src="/george-mato.jpg"
+                alt="George Mato"
+                className="hero-persona-image"
+                loading="lazy"
+              />
+              <div className="hero-persona-body">
+                <p className="hero-persona-quote">“Every residence is matched to lifestyle, legacy, and discretion.”</p>
+                <p className="hero-persona-meta">George Mato — Principal Advisor</p>
+              </div>
             </div>
             <span className="hero-status" ref={statusRef} />
           </div>
@@ -394,9 +463,9 @@ const Home = () => {
 
         <section className="gallery" id="gallery">
           <div className="gallery-header">
-            <h2>Recent vantage points</h2>
+            <h2>Portfolio studies</h2>
             <p className="gallery-subtitle">
-              Sightlines, sunset exposures, and transformative amenities defining Miami and Gulf-front living.
+              Light, texture, and horizon lines curated to express the calm confidence of coastal living.
             </p>
           </div>
           <div className="gallery-grid">
@@ -407,7 +476,6 @@ const Home = () => {
                 data-id={item.id}
               >
                 <img src={item.src} alt={item.alt} loading="lazy" />
-                <figcaption>{item.caption}</figcaption>
               </figure>
             ))}
           </div>
@@ -429,7 +497,7 @@ const Home = () => {
           <h2>Let's design your next move</h2>
           <p>Reserve a discreet conversation with George Mato to outline objectives, timing, and the residences that fit.</p>
           <div className="contact-actions">
-            <a className="cta" href="mailto:workwith@itsradai.com">
+            <a className="cta" href="mailto:gmato23@gmail.com">
               Request consultation
             </a>
           </div>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import Header from '../components/Header';
 
 const accolades = [
   {
@@ -45,22 +46,7 @@ const About = () => {
 
   return (
     <>
-      <header>
-        <div className="nav-inner">
-          <div className="brand">
-            <span className="brand-wordmark">The Luxury Group</span>
-          </div>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/#gallery">Residences</Link>
-            <Link to="/#approach">Approach</Link>
-            <a href="#contact">Contact</a>
-          </nav>
-          <a className="nav-cta" href="mailto:gmato23@gmail.com">
-            Schedule a Call
-          </a>
-        </div>
-      </header>
+      <Header />
 
       <main className="about-page">
         <section className="about">
@@ -75,27 +61,19 @@ const About = () => {
               <h2>About George Mato</h2>
               <h3>Principal, The Luxury Group — Licensed Realtor</h3>
               <p className="about-mission">
-                <em>"The finest waterfront residences curated personally."</em>
+                <em>"Every residence is matched to lifestyle, legacy, and discretion."</em>
               </p>
               <p>
-                With over three decades of distinguished service in luxury real estate, George Mato has established himself 
-                as Miami and Southwest Florida's preeminent consultant for ultra-high-net-worth clients seeking exceptional 
-                waterfront properties.
+                George Mato is an award-winning luxury brand real estate development specialist and the visionary Founder of The Luxury Group. As a trusted advisor to high-net-worth individuals, professional athletes, and celebrities seeking their dream vacation homes throughout South Florida and Southwest Florida, George delivers a level of discretion, care, and world-class service that sets him apart. His approach is personal, strategic, and always focused on creating an exceptional and seamless experience for every client.
               </p>
               <p>
-                As a Florida licensed Realtor, George specializes in the most exclusive market segments: penthouse acquisitions, 
-                branded residences, and private marina estates. His approach combines deep market intelligence with white-glove 
-                service, ensuring each client receives unparalleled access to off-market opportunities.
+                With a distinguished career representing multiple Ritz-Carlton luxury developments, George brings the foresight, insight, and proven expertise that discerning buyers depend on. His deep understanding of luxury living, paired with his ability to elevate brands and guide multimillion-dollar development projects, has established him as the go-to expert for clients who expect the very best in sophisticated, seasoned representation.
               </p>
               <p>
-                His role is to listen first. With a measured cadence, George translates wish lists into discreet search
-                mandates, orchestrating architects, private lenders, and legal partners so clients can move decisively
-                when the address is right.
+                Through The Luxury Group, George continues to define excellence in the luxury real estate and development marketplace, serving one extraordinary client, one remarkable property, and one inspired partnership at a time. Clients who choose to work with George gain more than a market leader; they gain a dedicated advocate committed to bringing their vision of luxury living to life.
               </p>
               <p>
-                With extensive experience in luxury development projects and coastal estate acquisitions, George's 
-                calm confidence and proprietary market insights consistently deliver exceptional results for his 
-                discerning clientele.
+                A true fixture of the city, George’s deep local history even includes a role in the original <em>Miami Vice</em>, reflecting his lifelong connection to the vibrant culture of South Florida.
               </p>
               <p className="about-signature">– George Mato, Licensed Realtor</p>
             </div>

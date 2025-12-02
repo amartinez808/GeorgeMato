@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import Header from '../components/Header';
 
 const heroClips = [
   {
@@ -10,7 +11,7 @@ const heroClips = [
   {
     id: 'uhd-video',
     poster: '/hero-1.jpg',
-    sources: [{ src: '/15768406-uhd_4096_2160_24fps.mp4', type:'video/mp4' }],
+    sources: [{ src: '/15768406-uhd_4096_2160_24fps.mp4', type: 'video/mp4' }],
   },
   {
     id: 'brickell',
@@ -75,17 +76,17 @@ const approachHighlights = [
   {
     title: 'Curated discovery',
     description:
-      'Confidential briefings, architectural context, and tailored itineraries that surface only the residences that matter.',
+      'Confidential briefings and tailored itineraries that surface only the residences that matter.',
   },
   {
     title: 'Intelligence at negotiation',
     description:
-      'Proprietary comps, association insight, and pacing strategy engineered to secure advantage without noise.',
+      'Proprietary comps and pacing strategy engineered to secure advantage without noise.',
   },
   {
     title: 'Concierge orchestration',
     description:
-      'Introductions to elite legal, financial, and design partners so every detail aligns with lifestyle and legacy.',
+      'Introductions to elite legal, financial, and design partners aligned with your lifestyle and legacy.',
   },
 ];
 
@@ -98,7 +99,6 @@ const Home = () => {
   const activeIndexRef = useRef(0);
   const location = useLocation();
   const [heroOverlayOpacity, setHeroOverlayOpacity] = useState(1);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     if (location.hash) {
@@ -220,7 +220,7 @@ const Home = () => {
 
     const advance = () => {
       const nextIndex = (activeIndexRef.current + 1) % videos.length;
-      playIndex(nextIndex).catch(() => {});
+      playIndex(nextIndex).catch(() => { });
     };
 
     const scheduleNext = () => {
@@ -268,7 +268,7 @@ const Home = () => {
         showStatus('');
         clearRotationTimer();
         const timerId = window.setTimeout(() => {
-          playIndex((index + 1) % videos.length).catch(() => {});
+          playIndex((index + 1) % videos.length).catch(() => { });
           activeTimeouts.delete(timerId);
         }, 1200);
         activeTimeouts.add(timerId);
@@ -279,7 +279,7 @@ const Home = () => {
         showStatus('Media temporarily unavailable');
         clearRotationTimer();
         const timerId = window.setTimeout(() => {
-          playIndex((index + 1) % videos.length).catch(() => {});
+          playIndex((index + 1) % videos.length).catch(() => { });
           activeTimeouts.delete(timerId);
         }, 1200);
         activeTimeouts.add(timerId);
@@ -306,7 +306,7 @@ const Home = () => {
     cleanupFns.push(() => document.removeEventListener('visibilitychange', handleVisibilityChange));
 
     markActive(activeIndexRef.current);
-    playIndex(activeIndexRef.current).catch(() => {});
+    playIndex(activeIndexRef.current).catch(() => { });
 
     return () => {
       clearRotationTimer();
@@ -345,62 +345,13 @@ const Home = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prev) => !prev);
-  };
 
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
 
   const currentYear = new Date().getFullYear();
 
   return (
     <>
-      <header>
-        <div className="nav-inner">
-          <div className="brand">
-            <span className="brand-wordmark">The Luxury Group</span>
-          </div>
-          <nav>
-            <a href="#gallery">Residences</a>
-            <a href="#approach">Approach</a>
-            <a href="#contact">Contact</a>
-            <Link to="/about">About</Link>
-          </nav>
-          <a className="nav-cta" href="mailto:gmato23@gmail.com">
-            Schedule a Call
-          </a>
-          <button
-            className="mobile-toggle"
-            onClick={toggleMobileMenu}
-            aria-label="Toggle navigation"
-            aria-expanded={isMobileMenuOpen}
-          >
-            <span className="hamburger-line"></span>
-            <span className="hamburger-line"></span>
-          </button>
-        </div>
-      </header>
-
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'is-open' : ''}`}>
-        <div className="mobile-menu-inner">
-          <nav className="mobile-nav">
-            <a href="#gallery" onClick={closeMobileMenu}>
-              Residences
-            </a>
-            <a href="#approach" onClick={closeMobileMenu}>
-              Approach
-            </a>
-            <a href="#contact" onClick={closeMobileMenu}>
-              Contact
-            </a>
-            <Link to="/about" onClick={closeMobileMenu}>
-              About
-            </Link>
-          </nav>
-        </div>
-      </div>
+      <Header />
 
       <main>
         <section className="hero" id="top" ref={heroRef}>
@@ -430,7 +381,7 @@ const Home = () => {
               </div>
               <h1>Exclusive Brickell &amp; Ritz-Carlton homes, personally curated.</h1>
               <p className="hero-subline">
-                George Mato secures the rarest addresses for discerning collectors with quiet, data-led representation.
+                Securing the rarest addresses with quiet, data-led representation.
               </p>
               <div className="hero-actions">
                 <a className="cta hero-primary" href="mailto:gmato23@gmail.com">
@@ -465,7 +416,7 @@ const Home = () => {
           <div className="gallery-header">
             <h2>Portfolio studies</h2>
             <p className="gallery-subtitle">
-              Light, texture, and horizon lines curated to express the calm confidence of coastal living.
+              Curated to express the calm confidence of coastal living.
             </p>
           </div>
           <div className="gallery-grid">

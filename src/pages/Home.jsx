@@ -27,36 +27,37 @@ const heroClips = [
 
 const galleryItems = [
   {
-    id: 'residence-frame-01',
-    src: '/hero-1.jpg',
-    alt: 'Sunlit terrace overlooking the city skyline',
+    id: 'luxury-yachts',
+    src: '/luxury-yachts.jpg',
+    alt: 'Luxury yachts docked at exclusive marina',
     variant: 'large',
   },
   {
-    id: 'water-horizon',
-    src: '/esteroBay.webp',
-    alt: 'Golden hour horizon across calm waterfront',
-  },
-  {
-    id: 'waterfront-residence',
-    src: '/naples.jpg',
-    alt: 'Contemporary waterfront residence with private dock',
-  },
-  {
-    id: 'interior-lounge',
-    src: '/GMphoto2.jpg',
-    alt: 'Refined interior lounge with sculptural lighting',
+    id: 'infinity-pool',
+    src: '/infinity-pool.jpg',
+    alt: 'Stunning infinity pool overlooking the ocean',
     variant: 'large',
   },
   {
-    id: 'coastal-retreat',
-    src: '/GMphoto3.jpg',
-    alt: 'Coastal retreat framed by tropical palms',
+    id: 'luxury-waterfront',
+    src: '/luxury-waterfront.jpg',
+    alt: 'Exclusive waterfront luxury residences',
   },
   {
-    id: 'architectural-detail',
-    src: '/GMphoto4.jpg',
-    alt: 'Architectural detail highlighting glass and stone',
+    id: 'luxury-condos',
+    src: '/luxury-condos.jpg',
+    alt: 'Premium high-rise condominium development',
+    variant: 'large',
+  },
+  {
+    id: 'golf-course',
+    src: '/golf-course.jpg',
+    alt: 'Championship golf course at luxury resort',
+  },
+  {
+    id: 'hotel-view',
+    src: '/hotel-view.jpg',
+    alt: 'Breathtaking views from luxury hotel residence',
   },
   {
     id: 'advisor-marina',
@@ -377,9 +378,9 @@ const Home = () => {
           <div className="hero-overlay" style={{ opacity: heroOverlayOpacity }}>
             <div className="hero-content">
               <div className="hero-intro">
-                <span className="hero-label">Private waterfront advisory</span>
+                <span className="hero-label">Private Waterfront Advisory — Personally Curated Branded Living for Miami & Naples</span>
               </div>
-              <h1>Exclusive Brickell &amp; Ritz-Carlton homes, personally curated.</h1>
+              <h1>Your Next Chapter In Luxury Living Starts Here</h1>
               <p className="hero-subline">
                 Securing the rarest addresses with quiet, data-led representation.
               </p>
@@ -398,7 +399,7 @@ const Home = () => {
             </div>
             <div className="hero-persona">
               <img
-                src="/george-mato.jpg"
+                src="/george-mato-professional.jpg"
                 alt="George Mato"
                 className="hero-persona-image"
                 loading="lazy"

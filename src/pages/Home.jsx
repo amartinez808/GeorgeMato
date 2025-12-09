@@ -438,7 +438,7 @@ const Home = () => {
         </section>
 
         <section className="contact" id="contact">
-          <h2>Let's design your next move</h2>
+          <h2>Let’s design your next chapter in luxury living.</h2>
           <p>Reserve a discreet conversation with George Mato to outline objectives, timing, and the residences that fit.</p>
           <div className="contact-bottom">
             <div className="contact-actions">

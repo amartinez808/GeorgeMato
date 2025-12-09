@@ -26,7 +26,7 @@ const Header = () => {
                         <a href="/#contact">Contact</a>
                         <Link to="/about">About</Link>
                     </nav>
-                    <a className="nav-cta" href="mailto:gmato23@gmail.com">
+                    <a className="nav-cta" href="mailto:george@theluxurygrouprealestate.com">
                         Schedule a Call
                     </a>
                     <button

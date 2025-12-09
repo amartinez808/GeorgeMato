@@ -7,29 +7,33 @@ A sophisticated React application showcasing George Mato's luxury real estate co
 ## 🌊 Live Demo
 
 **Production:** [Deploy URL] *(Vercel Auto-Deploy)*  
-**Repository:** https://github.com/amartinez808/GeorgeMato
+**Repository:** <https://github.com/amartinez808/GeorgeMato>
 
 ## ✨ Features
 
 ### 🎬 Cinematic Hero Experience
+
 - **8-video carousel** with smooth transitions and auto-rotation
 - **Premium 4K content** including UHD and custom GMvideo assets
 - **Graceful fallback** for autoplay restrictions
 - **8-second intervals** with optimized crossfade timing
 
 ### 🖼️ Professional Gallery
+
 - **9 luxury properties** in clean grid layout
 - **Full-width presentation** inspired by luxury real estate sites
 - **Responsive design** (2-column desktop, 1-column mobile)
 - **Hover effects** and elegant captions
 
 ### 👨‍💼 Professional Integration
+
 - **LinkedIn profile integration** with direct links
 - **Licensed broker credentials** prominently featured
 - **30+ years experience** and **$15B+ sales volume** highlighted
 - **6 professional achievements** showcase
 
 ### 🎨 Modern Design System
+
 - **Luxury coastal aesthetic** with blues, greens, and elegant neutrals
 - **Clean typography** using Inter font family
 - **Smooth animations** and micro-interactions
@@ -69,10 +73,12 @@ GeorgeMato/
 ## 🚀 Development
 
 ### Prerequisites
-- Node.js 16+ 
+
+- Node.js 16+
 - npm or yarn
 
 ### Setup
+
 ```bash
 # Clone repository
 git clone https://github.com/amartinez808/GeorgeMato
@@ -88,6 +94,7 @@ npm run dev
 The app will be available at `http://localhost:5173`
 
 ### Build & Deploy
+
 ```bash
 # Build for production
 npm run build
@@ -99,22 +106,26 @@ npm run preview
 ## 🎯 Key Sections
 
 ### Hero Carousel
+
 - 8 premium videos rotating every 8 seconds
 - Smooth opacity transitions with cubic-bezier easing
 - Mobile-optimized with touch interaction support
 
 ### Gallery
+
 - Full-width layout inspired by luxury real estate sites
 - Clean grid system with consistent aspect ratios
 - Professional captions with gradient overlays
 
 ### About Page
+
 - Comprehensive professional background
 - Licensed broker credentials
 - LinkedIn profile integration
 - 6 achievement highlights
 
 ### Contact Integration
+
 - Direct email consultation requests
 - LinkedIn profile access
 - Professional credential verification
@@ -137,6 +148,7 @@ npm run preview
 ## 🔄 Recent Updates
 
 ### v2.0 - React Conversion & Enhancement
+
 - ✅ Converted from static site to React application
 - ✅ Added 8-video hero carousel with smooth transitions
 - ✅ Integrated 9-photo professional gallery
@@ -148,6 +160,7 @@ npm run preview
 ## 🚀 Deployment
 
 ### Vercel (Recommended)
+
 1. Connect GitHub repository to Vercel
 2. Framework: **Vite**
 3. Build command: `npm run build`
@@ -155,6 +168,7 @@ npm run preview
 5. Auto-deploy on push to main
 
 ### Manual Build
+
 ```bash
 npm run build
 # Deploy dist/ folder to your hosting provider
@@ -165,7 +179,7 @@ npm run build
 **George Mato**  
 Principal, The Luxury Group  
 Licensed Real Estate Professional  
-📧 workwith@itsradai.com  
+📧 <george@theluxurygrouprealestate.com>  
 💼 [LinkedIn Profile](https://www.linkedin.com/in/georgemato/)
 
 **Development Team**  

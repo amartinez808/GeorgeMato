@@ -39,55 +39,46 @@ const galleryItems = [
     variant: 'large',
   },
   {
-    id: 'luxury-waterfront',
-    src: '/luxury-waterfront.jpg',
-    alt: 'Exclusive waterfront luxury residences',
-  },
-  {
-    id: 'luxury-condos',
-    src: '/luxury-condos.jpg',
-    alt: 'Premium high-rise condominium development',
-    variant: 'large',
-  },
-  {
-    id: 'golf-course',
-    src: '/golf-course.jpg',
-    alt: 'Championship golf course at luxury resort',
-  },
-  {
-    id: 'hotel-view',
-    src: '/hotel-view.jpg',
-    alt: 'Breathtaking views from luxury hotel residence',
-  },
-  {
-    id: 'advisor-marina',
-    src: '/georgeRC.webp',
-    variant: 'large',
-    alt: 'Advisor overlooking marina from private balcony',
-  },
-  {
     id: 'marina-dusk',
     src: '/RCREB Ritz Marina Final.jpg',
     variant: 'large',
     alt: 'Seaside marina with luxury residences at dusk',
   },
+  {
+    id: 'golf-course',
+    src: '/golf-course.jpg',
+    alt: 'Championship golf course with pristine fairways',
+    variant: 'large',
+  },
+  {
+    id: 'luxury-condos',
+    src: '/luxury-condos.jpg',
+    alt: 'Modern luxury condominiums with stunning architecture',
+    variant: 'large',
+  },
+  {
+    id: 'hotel-view',
+    src: '/hotel-view.jpg',
+    alt: 'Elegant hotel and resort architecture',
+    variant: 'large',
+  },
 ];
 
 const approachHighlights = [
   {
-    title: 'Curated discovery',
+    title: 'Curated Discovery',
     description:
-      'Confidential briefings and tailored itineraries that surface only the residences that matter.',
+      'Confidential briefings and beautifully arranged visits that make your search effortless—highlighting only the residences that feel aligned with your lifestyle, your vision, and the way you aspire to live.',
   },
   {
-    title: 'Intelligence at negotiation',
+    title: 'Intelligence at Negotiation',
     description:
-      'Proprietary comps and pacing strategy engineered to secure advantage without noise.',
+      'Steady, strategic advocacy supported by precise market insight, honoring your interests and ensuring every moment of your experience is guided with clarity and confidence.',
   },
   {
-    title: 'Concierge orchestration',
+    title: 'Concierge Orchestration',
     description:
-      'Introductions to elite legal, financial, and design partners aligned with your lifestyle and legacy.',
+      'Confidential coordination with a trusted circle of legal, financial, and design professionals—each selected for their excellence and dedication to providing the same level of care, discretion, and service you receive from The Luxury Group.',
   },
 ];
 
@@ -382,15 +373,15 @@ const Home = () => {
               </div>
               <h1>Your Next Chapter In Luxury Living Starts Here</h1>
               <p className="hero-subline">
-                Securing the rarest addresses with quiet, data-led representation.
+                An elevated advisory experience centered on attentive service, thoughtful guidance, and a seamless journey crafted entirely around you.
               </p>
               <div className="hero-actions">
-                <a className="cta hero-primary" href="mailto:gmato23@gmail.com">
+                <a className="cta hero-primary" href="mailto:george@theluxurygrouprealestate.com">
                   Talk with George
                 </a>
-                <a className="hero-cta-secondary" href="tel:7863017500">
+                <a className="hero-cta-secondary" href="tel:2397883998">
                   <span aria-hidden="true">☎</span>
-                  <span className="hero-cta-secondary-text">786-301-7500</span>
+                  <span className="hero-cta-secondary-text">239-788-3998</span>
                 </a>
                 <a className="hero-link" href="#gallery">
                   Explore portfolio
@@ -406,7 +397,7 @@ const Home = () => {
               />
               <div className="hero-persona-body">
                 <p className="hero-persona-quote">“Every residence is matched to lifestyle, legacy, and discretion.”</p>
-                <p className="hero-persona-meta">George Mato — Principal Advisor</p>
+                <p className="hero-persona-meta">George Mato — President</p>
               </div>
             </div>
             <span className="hero-status" ref={statusRef} />
@@ -433,8 +424,9 @@ const Home = () => {
           </div>
         </section>
 
+
         <section className="approach" id="approach">
-          <h2>Quiet, data-led representation</h2>
+          <h2>Quiet, Data-Led Representation</h2>
           <div className="approach-grid">
             {approachHighlights.map((highlight) => (
               <div className="approach-card" key={highlight.title}>
@@ -448,10 +440,19 @@ const Home = () => {
         <section className="contact" id="contact">
           <h2>Let's design your next move</h2>
           <p>Reserve a discreet conversation with George Mato to outline objectives, timing, and the residences that fit.</p>
-          <div className="contact-actions">
-            <a className="cta" href="mailto:gmato23@gmail.com">
-              Request consultation
-            </a>
+          <div className="contact-bottom">
+            <div className="contact-actions">
+              <a className="cta" href="mailto:george@theluxurygrouprealestate.com">
+                Request consultation
+              </a>
+            </div>
+            <div className="contact-image">
+              <img
+                src="/george-mato-professional.jpg"
+                alt="George Mato"
+                loading="lazy"
+              />
+            </div>
           </div>
         </section>
       </main>

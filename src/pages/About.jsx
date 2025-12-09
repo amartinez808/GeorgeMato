@@ -14,7 +14,7 @@ const accolades = [
       'Recognized luxury brand real estate development specialist serving high-net-worth individuals, professional athletes, global executives, and celebrities.',
   },
   {
-    title: 'Principal, The Luxury Group',
+    title: 'President, The Luxury Group',
     description:
       'Licensed Realtor with specialized expertise in luxury waterfront properties and high-end branded condominium developments.',
   },
@@ -59,7 +59,7 @@ const About = () => {
             />
             <div className="about-copy">
               <h2>About George Mato</h2>
-              <h3>Principal, The Luxury Group — Licensed Realtor</h3>
+              <h3>President, The Luxury Group — Licensed Realtor</h3>
               <p className="about-mission">
                 <em>"Every residence is matched to lifestyle, legacy, and discretion."</em>
               </p>
@@ -67,7 +67,7 @@ const About = () => {
                 George Mato is an award-winning luxury brand real estate development specialist with over 25 years of experience guiding South Florida's most discerning buyers through the region's finest real estate. His reputation is built on quiet mastery, discreet expertise, and unwavering commitment to each client's goals.
               </p>
               <p>
-                As Principal of The Luxury Group and a Licensed Realtor, George serves high-net-worth individuals, professional athletes, global executives, and celebrities seeking exceptional properties throughout South Florida and Southwest Florida. His approach is calm, private, and intensely client-first, delivering white-glove service that defines true luxury representation.
+                As President of The Luxury Group and a Licensed Realtor, George serves high-net-worth individuals, professional athletes, global executives, and celebrities seeking exceptional properties throughout South Florida and Southwest Florida. His approach is calm, private, and intensely client-first, delivering white-glove service that defines true luxury representation.
               </p>
               <p>
                 With a distinguished career representing multiple Ritz-Carlton luxury developments, George brings the foresight, insight, and proven expertise that discerning buyers depend on. His deep understanding of luxury living, paired with his ability to elevate brands and guide multimillion-dollar development projects, has established him as the go-to expert for clients who expect the very best.
@@ -101,7 +101,7 @@ const About = () => {
             responds personally to every introduction.
           </p>
           <div className="contact-actions">
-            <a className="cta" href="mailto:gmato23@gmail.com">
+            <a className="cta" href="mailto:george@theluxurygrouprealestate.com">
               Schedule consultation
             </a>
           </div>

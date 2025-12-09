@@ -39,12 +39,6 @@ const galleryItems = [
     variant: 'large',
   },
   {
-    id: 'marina-dusk',
-    src: '/RCREB Ritz Marina Final.jpg',
-    variant: 'large',
-    alt: 'Seaside marina with luxury residences at dusk',
-  },
-  {
     id: 'golf-course',
     src: '/golf-course.jpg',
     alt: 'Championship golf course with pristine fairways',
@@ -60,6 +54,12 @@ const galleryItems = [
     id: 'hotel-view',
     src: '/hotel-view.jpg',
     alt: 'Elegant hotel and resort architecture',
+    variant: 'large',
+  },
+  {
+    id: 'google-capture',
+    src: '/google-capture.jpg',
+    alt: 'George Mato Google profile highlight',
     variant: 'large',
   },
 ];

@@ -345,30 +345,31 @@ main {
 }
 
 .hero-persona {
-  display: grid;
-  grid-template-columns: 68px 1fr;
-  gap: 18px;
+  display: flex;
+  gap: 24px;
   align-items: center;
-  padding: 18px 22px;
+  padding: 24px 28px;
   border-radius: var(--radius-large);
   background: rgba(14, 19, 26, 0.45);
   backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  max-width: clamp(320px, 60vw, 520px);
+  max-width: clamp(320px, 60vw, 560px);
 }
 
 .hero-persona-image {
-  width: 68px;
-  height: 68px;
+  flex-shrink: 0;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 35%;
   border: 1px solid rgba(255, 255, 255, 0.45);
   box-shadow: 0 16px 36px rgba(10, 14, 20, 0.28);
 }
 
 .hero-persona-body {
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .hero-persona-quote {
@@ -492,7 +493,7 @@ main {
 .gallery {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0;
   display: grid;
   gap: 40px;
 }
@@ -503,26 +504,20 @@ main {
   align-items: flex-end;
   gap: 18px;
   flex-wrap: wrap;
+  padding: 0 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
 }
 
-.gallery-header h2 {
-  margin: 0;
-  font-family: 'Manrope', sans-serif;
-  font-size: clamp(2rem, 3.4vw, 2.8rem);
-  letter-spacing: -0.01em;
-}
-
-.gallery-subtitle {
-  margin: 0;
-  color: var(--muted);
-  max-width: 480px;
-}
+/* ... */
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  max-width: 1400px;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 100%;
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -530,15 +525,15 @@ main {
   position: relative;
   overflow: hidden;
   background: var(--surface);
-  border-radius: var(--radius-large);
-  box-shadow: 0 30px 60px rgba(12, 16, 22, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.3s ease;
   will-change: transform;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 500px;
+  height: 400px;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;

@@ -396,7 +396,7 @@ const Home = () => {
                 loading="lazy"
               />
               <div className="hero-persona-body">
-                <p className="hero-persona-quote">“Every residence is matched to lifestyle, legacy, and discretion.”</p>
+                <p className="hero-persona-quote">“Luxury is personal. My role is to ensure every residence feels crafted exclusively for you.”</p>
                 <p className="hero-persona-meta">George Mato — President</p>
               </div>
             </div>

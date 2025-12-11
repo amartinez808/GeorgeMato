@@ -57,6 +57,12 @@ const galleryItems = [
     variant: 'large',
   },
   {
+    id: 'luxury-towers',
+    src: '/luxury-towers.jpg',
+    alt: 'Twin luxury residential towers with resort-style amenities',
+    variant: 'large',
+  },
+  {
     id: 'google-capture',
     src: '/google-capture.jpg',
     alt: 'George Mato Google profile highlight',

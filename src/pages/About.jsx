@@ -61,7 +61,7 @@ const About = () => {
               <h2>About George Mato</h2>
               <h3>President, The Luxury Group — Licensed Realtor</h3>
               <p className="about-mission">
-                <em>"Every residence is matched to lifestyle, legacy, and discretion."</em>
+                <em>"In luxury real estate, serving my clients isn’t just a responsibility, it’s the highest honor and the foundation of every relationship I build, because behind every transaction is a life, a dream, and a future I’m entrusted to help shape."</em>
               </p>
               <p>
                 George Mato is an award-winning luxury brand real estate development specialist with over 25 years of experience guiding South Florida's most discerning buyers through the region's finest real estate. His reputation is built on quiet mastery, discreet expertise, and unwavering commitment to each client's goals.
@@ -78,7 +78,7 @@ const About = () => {
               <p>
                 A true fixture of the city, George's deep local history even includes a role in the original <em>Miami Vice</em>, reflecting his lifelong connection to the vibrant culture of South Florida.
               </p>
-              <p className="about-signature">– George Mato, Licensed Realtor</p>
+              <p className="about-signature">– George Mato, Licensed Realtor # SL580638</p>
             </div>
           </div>
         </section>

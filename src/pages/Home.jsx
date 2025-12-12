@@ -332,7 +332,7 @@ const Home = () => {
       }
 
       const heroHeight = heroNode.offsetHeight || 1;
-      const fadeDistance = heroHeight * 0.6;
+      const fadeDistance = heroHeight * 1.1;
       const scrolled = window.scrollY;
       const nextOpacity = Math.max(0, Math.min(1, 1 - scrolled / fadeDistance));
       setHeroOverlayOpacity(nextOpacity);
@@ -445,7 +445,7 @@ const Home = () => {
 
         <section className="contact" id="contact">
           <h2>Let’s design your next chapter in luxury living.</h2>
-          <p>Reserve a discreet conversation with George Mato to outline objectives, timing, and the residences that fit.</p>
+          <p>Reserve a private conversation with George Mato to clarify your objectives, align timing, and discover the residences thoughtfully tailored to you.</p>
           <div className="contact-bottom">
             <div className="contact-actions">
               <a className="cta" href="mailto:george@theluxurygrouprealestate.com">

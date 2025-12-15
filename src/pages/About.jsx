@@ -52,7 +52,7 @@ const About = () => {
         <section className="about">
           <div className="about-inner">
             <img
-              src="/george-mato-professional.jpg"
+              src="/georgeProfilePic.png"
               alt="George Mato, principal of The Luxury Group"
               className="about-headshot"
               loading="lazy"

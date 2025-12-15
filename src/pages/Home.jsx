@@ -396,7 +396,7 @@ const Home = () => {
             </div>
             <div className="hero-persona">
               <img
-                src="/george-mato-professional.jpg"
+                src="/georgeProfilePic.png"
                 alt="George Mato"
                 className="hero-persona-image"
                 loading="lazy"
@@ -454,7 +454,7 @@ const Home = () => {
             </div>
             <div className="contact-image">
               <img
-                src="/george-mato-professional.jpg"
+                src="/georgeProfilePic.png"
                 alt="George Mato"
                 loading="lazy"
               />

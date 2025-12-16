@@ -76,7 +76,7 @@ const About = () => {
                 For George, exceptional service isn't extra—it is luxury and all that he knows. Through The Luxury Group, he continues to define excellence in the luxury real estate marketplace, serving one extraordinary client, one remarkable property, and one inspired partnership at a time.
               </p>
               <p>
-                A true fixture of the city, George's deep local history even includes a role in the original <em>Miami Vice</em>, reflecting his lifelong connection to the vibrant culture of South Florida.
+                A true fixture of the city, George's deep local history even includes roles in the original <em>Miami Vice</em>, reflecting his lifelong connection to the vibrant culture of South Florida.
               </p>
               <p className="about-signature">– George Mato, Licensed Realtor # SL580638</p>
             </div>

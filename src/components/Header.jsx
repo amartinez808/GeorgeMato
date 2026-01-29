@@ -23,6 +23,7 @@ const Header = () => {
                         <Link to="/">Home</Link>
                         <a href="/#gallery">Residences</a>
                         <a href="/#approach">Approach</a>
+                        <Link to="/developers">Developers</Link>
                         <a href="/#contact">Contact</a>
                         <Link to="/about">About</Link>
                     </nav>
@@ -53,6 +54,9 @@ const Header = () => {
                         <a href="/#approach" onClick={closeMobileMenu}>
                             Approach
                         </a>
+                        <Link to="/developers" onClick={closeMobileMenu}>
+                            Developers
+                        </Link>
                         <a href="/#contact" onClick={closeMobileMenu}>
                             Contact
                         </a>
